@@ -47,7 +47,7 @@ class trovaLibroHandler(AbstractRequestHandler):
 sb = SkillBuilder()
 sb.add_request_handler(LaunchRequestHandler())
 sb.add_exception_handler(CatchAllExceptionHandler())
-sb.add_request_handler(ChineseAnimalIntentHandler())
+sb.add_request_handler(trovaLibroHandler())
 
 
 
