@@ -1,0 +1,97 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "6738c60e-c0dd-4d87-b303-b79428760ea3": {
+        "id": "6738c60e-c0dd-4d87-b303-b79428760ea3",
+        "parent": null,
+        "name": "books.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "books.py",
+        "cursor": {
+          "lineNumber": 38,
+          "column": 14
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "books"
+        },
+        "triggers": [
+          {
+            "resourceName": "alexaSK4198a8e63b7f43d2963fc49c6f71a28f",
+            "config": {}
+          }
+        ],
+        "lastUpdated": 1618170193909,
+        "testCases": {
+          "0ca1bd69-614e-4286-9b54-69bfda6000f7": {
+            "id": "0ca1bd69-614e-4286-9b54-69bfda6000f7",
+            "name": "Test event",
+            "functionId": "6738c60e-c0dd-4d87-b303-b79428760ea3",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      }
+    },
+    "openFiles": [
+      "6738c60e-c0dd-4d87-b303-b79428760ea3"
+    ],
+    "currentFileId": "6738c60e-c0dd-4d87-b303-b79428760ea3",
+    "resources": {
+      "alexaSK4198a8e63b7f43d2963fc49c6f71a28f": {
+        "name": "alexaSK4198a8e63b7f43d2963fc49c6f71a28f",
+        "type": "ALEXA",
+        "config": {
+          "type": 1,
+          "verifiedID": true,
+          "skillID": "amzn1.ask.skill.4198a8e6-3b7f-43d2-963f-c49c6f71a28f",
+          "applicationID": ""
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.7.0",
+    "projectName": "books",
+    "projectDescription": "trova libri",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "python",
+    "platformRegions": {},
+    "lastSave": 1618170468276
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "books",
+      "url": "https://github.com/antviet/books"
+    }
+  }
+}
