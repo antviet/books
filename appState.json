@@ -11,13 +11,13 @@
         "isRemovable": true,
         "filePath": "books.py",
         "cursor": {
-          "lineNumber": 57,
-          "column": 1
+          "lineNumber": 47,
+          "column": 20
         },
         "config": {
           "runtime": "python3.8",
           "handler": "handler",
-          "timeout": 60,
+          "timeout": 68,
           "memory": 128,
           "layers": [],
           "name": "books"
@@ -85,7 +85,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1618170541355
+    "lastSave": 1618170819620
   },
   "VCS_STATE": {
     "provider": "GitHub",
