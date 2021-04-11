@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "books.py",
         "cursor": {
-          "lineNumber": 47,
-          "column": 20
+          "lineNumber": 42,
+          "column": 74
         },
         "config": {
           "runtime": "python3.8",
@@ -38,6 +38,16 @@
             "eventTemplate": "hello-world"
           }
         }
+      },
+      "96427e7c-a681-4fff-820c-55ae00f5f5d6": {
+        "id": "96427e7c-a681-4fff-820c-55ae00f5f5d6",
+        "parent": null,
+        "name": "requirements.txt",
+        "type": "TEXT_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "requirements.txt"
       }
     },
     "openFiles": [
@@ -53,6 +63,24 @@
           "verifiedID": true,
           "skillID": "amzn1.ask.skill.4198a8e6-3b7f-43d2-963f-c49c6f71a28f",
           "applicationID": ""
+        }
+      },
+      "ddbbooks": {
+        "name": "ddbbooks",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 0,
+          "table": {
+            "arn": "",
+            "name": "books",
+            "partitionKey": "bookID",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 0
+          }
         }
       }
     },
@@ -73,7 +101,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "boto3": {
+          "name": "boto3",
+          "language": "python",
+          "version": "1.16.43",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -85,7 +121,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1618170819620
+    "lastSave": 1618171001164
   },
   "VCS_STATE": {
     "provider": "GitHub",

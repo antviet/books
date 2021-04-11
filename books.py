@@ -1,3 +1,5 @@
+import boto3
+ddb = boto3.client("dynamodb")
 from ask_sdk_core.skill_builder import SkillBuilder
 from ask_sdk_core.dispatch_components import AbstractRequestHandler
 from ask_sdk_core.dispatch_components import AbstractExceptionHandler
@@ -20,25 +22,25 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
         handler_input.response_builder.speak("Sorry, there was some problem. Please try again!!")
         return handler_input.response_builder.response
 
-class trovaLibroHandler(AbstractRequestHandler):
-    def can_handle(self, handler_input):
-        return is_intent_name("trovaLibro")(handler_input)
-
-    def handle(self, handler_input):
-        year = handler_input.request_envelope.request.intent.slots['year'].value
-
         try:
             data = ddb.get_item(
                 TableName="books",
                 Key={
                     'bookID': {
-                        'S': libro
+                        'S': book
                     }
                 }
             )
         except BaseException as e:
             print(e)
             raise(e)
+class trovaLibroHandler(AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        return is_intent_name("trovaLibro")(handler_input)
+
+    def handle(self, handler_input):
+        book = handler_input.request_envelope.request.intent.slots['libro'].value
+
         
         speech_text = "Il libro è di " + data['author']
         handler_input.response_builder.speak(speech_text).set_should_end_session(False)

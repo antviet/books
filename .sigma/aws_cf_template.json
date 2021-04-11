@@ -23,6 +23,25 @@
     }
   },
   "Resources": {
+    "ddbbooks": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "TableName": "books",
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "bookID",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "bookID",
+            "KeyType": "HASH"
+          }
+        ],
+        "BillingMode": "PAY_PER_REQUEST"
+      }
+    },
     "books": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -80,7 +99,29 @@
               }
             }
           ]
-        }
+        },
+        "Policies": [
+          {
+            "PolicyName": "booksPolicy",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "dynamodb:GetItem"
+                  ],
+                  "Resource": {
+                    "Fn::GetAtt": [
+                      "ddbbooks",
+                      "Arn"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
       }
     },
     "alexaSK4198a8e63b7fbooksPermission": {
